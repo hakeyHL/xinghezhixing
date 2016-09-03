@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <substitutionProperty name="log.base" value="${user.home}/logs/api"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-6level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="StdoutFile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/stdout.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/stdout.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SqlLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/sql-access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/sql-access.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SpringExceptionLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/spring-exception.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/spring-exception.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="ErrorLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/error.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 只接受error的日志 -->
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="InfoLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/info.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 只接受info的日志 -->
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <appender name="MongodbLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/mongodb.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/mongodb.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ThirdPartLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/thirdPart.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/thirdPart.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- code info log info to info log, error to error log. -->
+    <logger name="hasoffer" level="INFO">
+        <appender-ref ref="InfoLoggerFileOut"/>
+        <appender-ref ref="ErrorLoggerFileOut"/>
+    </logger>
+
+    <!-- Hibernate SQL -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="ERROR">
+        <appender-ref ref="SqlLoggerFileOut"/>
+    </logger>
+    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="ERROR">
+        <appender-ref ref="SqlLoggerFileOut"/>
+    </logger>
+    <logger name="org.hibernate.SQL" level="ERROR">
+        <appender-ref ref="SqlLoggerFileOut"/>
+    </logger>
+    <logger name="org.hibernate.engine.QueryParameters" level="ERROR">
+        <appender-ref ref="SqlLoggerFileOut"/>
+    </logger>
+    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="ERROR">
+        <appender-ref ref="SqlLoggerFileOut"/>
+    </logger>
+
+    <!-- mongodb log -->
+    <logger name="com.mongodb" level="INFO">
+        <appender-ref ref="MongodbLoggerFileOut"/>
+    </logger>
+
+    <!-- third part log -->
+    <logger name="org.springframework" level="INFO">
+        <appender-ref ref="ThirdPartLoggerFileOut"/>
+    </logger>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="StdoutFile"/>
+    </root>
+</configuration>

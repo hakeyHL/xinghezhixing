@@ -1,0 +1,174 @@
+//display
+.dis-ib(){display:inline-block;}
+.dis-b(){display:block;}
+.dis-i(){display:inline;}
+
+//border
+.b(@color:transparent,@w:1,@type:solid){
+  @mw:unit(@w,px);
+  border:@mw solid @color;
+}
+.bt(@color:transparent,@w:1,@type:solid){
+  @mw:unit(@w,px);
+  border-top:@mw solid @color;
+}
+.br(@color:transparent,@w:1,@type:solid){
+  @mw:unit(@w,px);
+  border-right:@mw solid @color;
+}
+.bb(@color:transparent,@w:1,@type:solid){
+  @mw:unit(@w,px);
+  border-bottom:@mw solid @color;
+}
+.bl(@color:transparent,@w:1,@type:solid){
+  @mw:unit(@w,px);
+  border-left:@mw solid @color;
+}
+
+//padding
+.pl(@w,@d:px){@my:unit(@w,@d);padding-left:@my;}
+.pr(@w,@d:px){@my:unit(@w,@d);padding-right:@my;}
+.pt(@w,@d:px){@my:unit(@w,@d);padding-top:@my;}
+.pb(@w,@d:px){@my:unit(@w,@d);padding-bottom:@my;}
+.p(@w,@d:px){@my:unit(@w,@d);padding:@my;}
+
+//margin
+.m(@w,@d:px){@my:unit(@w,@d);margin:@my;}
+.ml(@w,@d:px){@my:unit(@w,@d);margin-left:@my;}
+.mr(@w,@d:px){@my:unit(@w,@d);margin-right:@my;}
+.mt(@w,@d:px){@my:unit(@w,@d);margin-top:@my;}
+.mb(@w,@d:px){@my:unit(@w,@d);margin-bottom:@my;}
+
+//a标签配置
+.acolor(@color){color:@color;
+	&:link{color:@color}
+	&:visited{color:@color}
+	&:hover{color:@color}
+	&:active{color:@color}
+}
+//color
+.c(@c){
+  color:@c;
+}
+//width
+.w(@w,@d:px){
+  @mw:unit(@w,@d);
+  width:@mw;
+}
+//height
+.h(@h,@d:px){
+  @mh:unit(@h,@d);
+  height:@mh;
+}
+
+//float:left
+.fl(){
+  float:left;
+}
+//float:right
+.fr(){
+  float:right;
+}
+//text-align:center
+.tc(){
+  text-align: center;
+}
+//text-align:left
+.tl(){
+  text-align: left;
+}
+//text-align:right
+.tr(){
+  text-align: right;
+}
+//border-radius
+.bra(@w){
+  @mw:unit(@w,px);
+  border-radius:@mw;
+}
+//line-height
+.lh(@h,@d:px){
+  @mh:unit(@h,@d);
+  line-height:@mh;
+}
+//font-size
+.ft(@size,@d:px){
+  @ms:unit(@size,@d);
+  font-size:@ms;
+}
+//font-weight
+.fw(@type){
+  font-weight:@type;
+}
+//background-color
+.bc(@color){
+  background-color:@color;
+}
+//text-indent
+.ti(@w){
+  @mw:unit(@w,px);
+  text-indent:@mw;
+}
+//position:absolute
+.abs(){
+  position:absolute;
+}
+//position:relative
+.rel(){
+  position:relative;
+}
+//position:fixed
+.fix(){
+	position:fixed;
+}
+//filter高斯
+.blur(@v){
+  @px:unit(@v,px);
+  -webkit-filter: blur(@px); /* Chrome, Opera */
+  -moz-filter: blur(@px);
+  -ms-filter: blur(@px);
+  filter: blur(@px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@v, MakeShadow=false); /* IE6~IE9 */
+
+}
+
+
+//居中
+.center(@w,@h){
+  @mh:unit(@h,px);
+  @mw:unit(@w,px);
+  line-height:@mh;
+  width:@mw;
+  text-align:center;
+}
+//旋转
+.turn(-45deg){
+	position: absolute; /*ie6不支持*/
+		top: -85px;
+		left: -33px;
+
+		_position: absolute; /*ie6 hack*/
+		
+		/*transform 指定平移及旋转角度，具体查看css手册*/
+		-moz-transform: translate(-40px,45px) rotate(-45deg);
+		-webkit-transform: translate(-40px,45px) rotate(-45deg);
+		-o-transform: translate(-40px,45px) rotate(-45deg);
+		transform: translate(-40px,45px) rotate(-45deg);
+
+		-moz-box-shadow: 0 0 5px rgba(0,0,0,.5),inset 0 0 2px #fff;
+		-webkit-box-shadow: 0 0 5px rgba(0,0,0,.5),inset 0 0 2px #fff; /*逗号分隔表示多组效果*/
+		        box-shadow: 0 0 5px rgba(0,0,0,.5),inset 0 0 2px #fff;
+				text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+		/*ie滤镜-矩阵*/
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',M11=.7,M12=0.6,M21=-.7,M22=0.6);
+
+}
+//滑动
+.slide(@time:350ms,@x:0,@y:0){
+  transition-property: transform;
+  transition-duration:@time;
+  transition-timing-function:cubic-bezier(0, 0, 0.25, 1) ;
+  @mx:unit(@x,px);
+  @my:unit(@y,px);
+  transform: translate(@mx,@my);
+}

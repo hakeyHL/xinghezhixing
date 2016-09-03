@@ -1,0 +1,91 @@
+.cat-con {
+  margin-top: 32px;
+}
+.cat-con .cat-bar {
+  box-sizing: border-box;
+  width: 20.5%;
+  float: left;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+.cat-con .cat-main {
+  box-sizing: border-box;
+  float: left;
+  width: 79.5%;
+}
+.cat-con .cat-main .row {
+  margin-left: 9px;
+  margin-right: 9px;
+  padding-bottom: 24px;
+}
+.cat-con .cat-main .col-5 {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 24px;
+}
+.cat-main-bd {
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  margin-left: 24px;
+}
+h1,
+.cat-filter-title {
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #dfdfdf;
+  text-indent: 10px;
+}
+h1 {
+  text-indent: 20px;
+}
+.cat-filter-list {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.cat-filter-list li {
+  border-bottom: 1px solid #dfdfdf;
+}
+.cat-filter-list li:last-child {
+  border-bottom: 0px;
+}
+.cat-filter-item {
+  display: block;
+  line-height: 50px;
+  font-size: 14px;
+  color: #333;
+}
+.cat-filter-item:hover {
+  text-decoration: none;
+}
+.cat-active {
+  color: #ff6600;
+}
+.cat-sec-a {
+  display: block;
+  height: 100px;
+}
+.cat-sec-a img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.cat-sec-list {
+  padding: 26px 28px;
+  border: 1px solid transparent;
+}
+.cat-sec-list:hover {
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+.cat-sec-des {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  line-height: 3em;
+  overflow: hidden;
+}
+.cat-sec-des a {
+  display: inline-block;
+  line-height: 1.4em;
+  vertical-align: middle;
+}

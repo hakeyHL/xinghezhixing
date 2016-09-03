@@ -1,0 +1,61 @@
+@import "../function.less";
+@import "../variable.less";
+
+.catf-wrap {
+  @w: 3;
+  .row {
+    .ml(0-@w);
+    .mr(0-@w);
+  }
+  .col-6 {
+    .mt(2*@w);
+    .pl(@w);
+    .pr(@w);
+  }
+}
+
+.catf-item {
+  display:block;
+  overflow: hidden;
+  padding-top:124.3%;
+  position: relative;
+  width:100%;
+}
+
+.catf-item-img {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+}
+
+.catf-cover {
+  height:45px;
+  line-height:45px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.catf-cover-img {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  .blur(10);
+}
+.catf-mask-con{
+  height:100%;
+  background:rgba(0,0,0,0.2);
+  position:relative;
+}
+.catf-mask {
+  font-size:14px;
+  width:100%;
+  max-width:100%;
+  display:inline-block;
+  vertical-align: middle;
+  line-height:normal;
+    color:#fff;
+    text-align: center;
+}

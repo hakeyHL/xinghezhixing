@@ -1,0 +1,311 @@
+@charset "utf-8";
+/******************************************
+@ Author: Piaoyis;
+@ Date: 2014-03-17;
+@ version: 1.0;
+@ Description: default CSS;
+@ blog: http://me.piaoyis.com;
+******************************************/
+html {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html, body, nav, div, ul, li, h1, h2, h3, h4, blockquote, p, a, input, img {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font: normal 14px/1.7 "Microsoft YaHei", Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, tr, td {
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    line-height: 2;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+}
+
+.fl {
+    display: block;
+    float: left;
+}
+
+.fr {
+    display: block;
+    float: right;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+h3 {
+    font-size: 120%;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+fieldset {
+    display: block;
+    padding: 25px 14px 15px;
+    border: 0;
+    background: rgba(255, 255, 255, .9);
+    position: relative;
+}
+
+/* Login */
+.login {
+    background: #FFF;
+    overflow: visible;
+}
+
+.col-center {
+    position: fixed;
+    width: 360px;
+    left: 50%;
+    top: 180px;
+    margin-left: -180px;
+}
+
+.login #header {
+    height: 71px;
+    margin-bottom: 30px;
+    padding: 0 2%;
+    background: #F4F4F4;
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+}
+
+.login .logo {
+    width: 80px;
+    height: 38px;
+    margin-top: 18px;
+    background: url(../images/logo-80.png) no-repeat 0 0;
+}
+
+.login-form header {
+    padding: 8px 14px 5px;
+    font-size: 18px;
+}
+
+.login-form footer {
+    padding: 10px 14px 10px;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.login-form footer .btn {
+    float: right;
+    cursor: pointer;
+}
+
+.login-form label {
+    position: relative;
+    display: block;
+}
+
+.login-form .input input, .login-form .select select, .login-form .textarea textarea {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    *width: 85%;
+    height: 36px;
+    padding: 8px 10px;
+    outline: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    background: #fff;
+    font: 13px/16px 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #404040;
+    appearance: normal;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-color: #BDBDBD;
+}
+
+.login-form .label {
+    position: relative;
+    display: block;
+    margin-bottom: 6px;
+    line-height: 19px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    padding: 0;
+}
+
+.login-form .icon-append, .login-form .icon-prepend {
+    color: #A2A2A2;
+}
+
+.login-form .icon-append {
+    right: 5px;
+    padding-left: 3px;
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+.login-form .icon-append, .login-form .icon-prepend {
+    *display: none;
+    position: absolute;
+    top: 7px;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.login-form .input .icon-append + input, .login-form .textarea .icon-append + textarea {
+    padding-right: 37px;
+}
+
+.tip-inner {
+    color: #FFF;
+}
+
+/* main */
+#main #header {
+    height: 49px;
+    padding: 0 2%;
+    background: #F4F4F4;
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+}
+
+#main .logo {
+    width: 80px;
+    height: 38px;
+    margin-top: 5px;
+    background: url(../images/logo-80.png) no-repeat 0 0;
+}
+
+#left-panel {
+    position: absolute;
+    width: 220px;
+    left: 0;
+    top: 49px;
+    z-index: 102;
+    background: #3A3633;
+    color: #FFF;
+}
+
+.login-info {
+    font-size: 12px;
+    color: #FFF;
+}
+
+.login-info > span {
+    display: block;
+    height: 38px;
+    padding: 0 10px;
+    border-bottom: 1px solid #1A1817;
+}
+
+.login-info a {
+    text-decoration: none !important;
+    color: #a8a8a8;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.login-info img {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1px;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+nav ul li a {
+    line-height: normal;
+    font-size: 14px;
+    padding: 10px 10px 10px 11px;
+    color: #a8a8a8;
+    display: block;
+    font-weight: 400;
+    text-decoration: none !important;
+    position: relative;
+}
+
+nav > ul > li > ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 23px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #7A7A7A;
+}
+
+nav > ul > li > ul > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px
+}
+
+nav > ul > li > ul > li > ul > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px
+}
+
+nav ul li a:focus {
+    color: #c9c9c9
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+.main-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -50px;
+}

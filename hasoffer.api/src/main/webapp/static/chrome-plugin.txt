@@ -1,0 +1,1 @@
+{"verson":"1.0","src":["http://price.allbuy.com/static/js/plugin/cmprTmpl.js","http://price.allbuy.com/static/js/plugin/c-plugin.js"],"href":"http://price.allbuy.com/static/css/plugin/cmpr-plugin.css"}

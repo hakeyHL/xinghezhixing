@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+">
+
+    <!-- 声明工厂 -->
+    <bean id="qrtz_scheduler" autowire="no" lazy-init="false"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="jobFactory">
+            <bean class="hasoffer.job.quartz.spring.SpringBeanJobFactory"/>
+        </property>
+        <property name="schedulerName" value="qrtz_scheduler"/>
+        <!-- 发现添加dataSource之后无法正常执行调度任务，原因不知道。 -->
+        <!--<property name="dataSource" ref="druidDataSource"/>-->
+        <!--<property name="configLocation" value="classpath:quartz.properties"/>-->
+        <!--applicationContextSchedulerContextKey： 是org.springframework.scheduling.quartz.SchedulerFactoryBean这个类中
+            把spring上下 文以key/value的方式存放在了quartz的上下文中了， 可以用applicationContextSchedulerContextKey所定义的key得到对应的spring上下文 -->
+        <property name="applicationContextSchedulerContextKey" value="applicationContextKey"/>
+        <property name="triggers">
+            <list>
+                <ref bean="demoTrigger"/>
+                <ref bean="fetchTrigger"/>
+                <!--<ref bean="dealozTrigger"/>-->
+                <ref bean="orderSATrigger"/>
+                <ref bean="imageDownLoadTrigger"/>
+                <ref bean="imageDownLoadTrigger2"/>
+                <ref bean="skuImageDownLoadTrigger"/>
+                <ref bean="statHijackFetchTrigger"/>
+                <ref bean="statSearchLogTrigger"/>
+                <ref bean="skuImageListDownLoadTrigger"/>
+                <ref bean="priceOffNoticeTrigger"/>
+                <ref bean="pushFailRePushTrigger"/>
+                <!--<ref bean="statVisitSkuUpdateTrigger"/>-->
+            </list>
+        </property>
+
+        <property name="globalJobListeners">
+            <list>
+                <ref bean="historyJobListener"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="historyJobListener" class="hasoffer.job.quartz.HistoryJobListener"/>
+
+    <!-- demo job -->
+    <bean name="demoJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.DemoJobBean"/>
+    </bean>
+
+    <bean id="demoTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="demoJob"/>
+        <property name="cronExpression" value="0 0 0/1 * * ? "/>
+    </bean>
+
+    <!-- fetch job -->
+    <bean name="fetchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.fetch.FetchJobBean"/>
+        <!--<property name="beanName" value="fetchJobBean"/>-->
+    </bean>
+
+    <bean id="fetchTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="fetchJob"/>
+        <property name="cronExpression" value="0 0 1 1 1 ? 2066 "/>
+    </bean>
+
+
+    <!--<bean name="dealozJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+    <!--<property name="jobClass" value="hasoffer.job.bean.fetch.DealozJobBean"/>-->
+    <!--</bean>-->
+    <!--<bean id="dealozTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+    <!--<property name="jobDetail" ref="dealozJob"/>-->
+    <!--<property name="cronExpression" value="0 0 1 1 1 ? 2066 "/>-->
+    <!--</bean>-->
+
+    <bean name="orderSAJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.order.OrderSAsisJobBean"/>
+    </bean>
+    <bean id="orderSATrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="orderSAJob"/>
+        <property name="cronExpression" value="0 0 0/1 * * ? "/>
+    </bean>
+
+    <!-- 图片抓取 -->
+    <bean name="imageDownLoadJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.image.ImageDownloadJobBean"/>
+    </bean>
+    <bean id="imageDownLoadTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="imageDownLoadJob"/>
+        <property name="cronExpression" value="0 0/20 * * * ?"/>
+    </bean>
+
+    <bean name="imageDownLoadJob2" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.image.Image2DownloadJobBean"/>
+    </bean>
+    <bean id="imageDownLoadTrigger2" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="imageDownLoadJob2"/>
+        <property name="cronExpression" value="0 0/20 * * * ?"/>
+    </bean>
+
+    <bean name="skuImageDownLoadJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.image.SkuImageDownloadJobBean"/>
+    </bean>
+    <bean id="skuImageDownLoadTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="skuImageDownLoadJob"/>
+        <property name="cronExpression" value="0 0/10 * * * ?"/>
+    </bean>
+
+    <bean name="skuImageListDownLoadJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.image.SkuImageListDownLoadJobBean"/>
+    </bean>
+    <bean id="skuImageListDownLoadTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="skuImageListDownLoadJob"/>
+        <property name="cronExpression" value="0 30 12 * * ?"/>
+    </bean>
+
+    <bean name="priceOffNoticeJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.push.PriceOffNoticeJobBean"/>
+    </bean>
+
+    <bean id="priceOffNoticeTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="priceOffNoticeJob"/>
+        <property name="cronExpression" value="0 48 15 * * ?"/>
+    </bean>
+
+    <bean name="pushFailRePushJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.push.RePushPriceOffNoticeJobBean"/>
+    </bean>
+
+    <bean id="pushFailRePushTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="pushFailRePushJob"/>
+        <property name="cronExpression" value="0 30 11,14,22 * * ?"/>
+    </bean>
+
+    <!-- 定时统计 -->
+    <bean name="statHijackFetchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.stat.StatHijackFetchJobBean"/>
+    </bean>
+    <bean id="statHijackFetchTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="statHijackFetchJob"/>
+        <property name="cronExpression" value="0 0 0/1 * * ?"/>
+    </bean>
+
+    <bean name="statSearchLogJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="hasoffer.job.bean.stat.StatSearchLogJobBean"/>
+    </bean>
+    <bean id="statSearchLogTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="statSearchLogJob"/>
+        <property name="cronExpression" value="0 0 10 * * ?"/>
+    </bean>
+
+    <!--<bean name="statVisitSkuUpdateJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+    <!--<property name="jobClass" value="hasoffer.job.bean.stat.StatVisitSkuUpdateJobBean"/>-->
+    <!--</bean>-->
+    <!--<bean id="statVisitSkuUpdateTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+    <!--<property name="jobDetail" ref="statVisitSkuUpdateJob"/>-->
+    <!--<property name="cronExpression" value="0 30 0/1 * * ?"/>-->
+    <!--</bean>-->
+</beans>

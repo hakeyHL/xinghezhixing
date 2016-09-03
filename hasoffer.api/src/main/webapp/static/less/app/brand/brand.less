@@ -1,0 +1,77 @@
+@import "D:\less\function.less";
+
+.brand {
+  @bra: 4;
+  @bh: 667px;
+  &-sprite {
+    background: url(../../../image/sprite/sprite-brand.png) no-repeat;
+    .dis-b;
+  }
+  &-bar {
+    width: 246px;
+    .fl();
+    box-sizing: border-box;
+    .b(#dfdfdf);
+    .p(3);
+  }
+  &-main {
+    width: 930px;
+    .fl();
+    .ml(24);
+    height: @bh;
+    .b(#dfdfdf);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  &-cat {
+    max-height: 659px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &-second-cat-item {
+    .lh(19);;
+    color: #333;
+    .dis-b();
+    .pl(16);
+    .ft(14);
+  }
+  &-desc {
+    .bra(@bra);
+  }
+  &-row {
+    padding: 15px 30px 30px 30px;
+  }
+  &-col-3 {
+    width: 33.33%;
+    .fl();
+  }
+  &-item {
+    .dis-b();
+    .ft(13);
+    color: #0099cc;
+    .lh(30);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &-first-cat {
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 20px;
+    color: #333;
+    font-weight: bold;
+    padding-left: 7px;
+  }
+  &-second-active {
+    color: #f60;
+  }
+}
+
+h1 {
+  .ft(18);
+  color: #333;
+  font-weight: bold;
+  .lh(51px);
+  .ti(20);
+  .bb(#dfdfdf);
+}

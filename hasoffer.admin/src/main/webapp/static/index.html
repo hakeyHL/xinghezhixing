@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+    <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.form.js"></script>
+</head>
+<body>
+title
+<div class="row">
+
+    <div>
+        <form class="form-horizontal" action="${ctx}/temp/logcount/test/query" method="get">
+            <div class="form-group has-error has-feedback">
+
+                <input type="hidden" name="action" value="${action}">
+                <label class="col-sm-1 control-label">更新日期</label>
+                <div class="col-sm-2">
+                    <input type="text" id="input_date" name="startDate" class="form-control" value="${startDate}"
+                           placeholder="date">
+                    <span class="fa fa-calendar txt-danger form-control-feedback"></span>
+                </div>
+
+                <div class="col-sm-1">
+                    <button class="btn btn-primary btn-label-left btn-xs" type="submit" style="width:80px">
+                        submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+
+        <form class="form-horizontal" action="${ctx}/temp/logcount/test/query" method="get" class="col-sm-5">
+            <div class="form-group has-error has-feedback">
+                <input type="hidden" name="action" value="${action}">
+                <input type="hidden" id="puc_flag" name="puc_flag" value="false">
+                <label class="col-sm-1 control-label">访问次数大于</label>
+                <div class="col-sm-2">
+                    <input type="text" id="puc_number" name="puc_number" class="form-control"/>
+                </div>
+
+                <div class="col-sm-1">
+                    <button class="btn btn-primary btn-label-left btn-xs" style="width:80px" type="submit"
+                            onclick="setFlag()">
+                        <span></span>count
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

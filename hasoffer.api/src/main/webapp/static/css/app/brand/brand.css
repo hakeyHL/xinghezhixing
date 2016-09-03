@@ -1,0 +1,70 @@
+.brand-sprite {
+  background: url(../../../image/sprite/sprite-brand.png) no-repeat;
+  display: block;
+}
+.brand-bar {
+  width: 246px;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #dfdfdf;
+  padding: 3px;
+}
+.brand-main {
+  width: 930px;
+  float: left;
+  margin-left: 24px;
+  height: 667px;
+  border: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.brand-cat {
+  max-height: 659px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.brand-second-cat-item {
+  line-height: 19px;
+  color: #333;
+  display: block;
+  padding-left: 16px;
+  font-size: 14px;
+}
+.brand-desc {
+  border-radius: 4px;
+}
+.brand-row {
+  padding: 15px 30px 30px 30px;
+}
+.brand-col-3 {
+  width: 33.33%;
+  float: left;
+}
+.brand-item {
+  display: block;
+  font-size: 13px;
+  color: #0099cc;
+  line-height: 30px;
+}
+.brand-item:hover {
+  text-decoration: none;
+}
+.brand-first-cat {
+  line-height: 30px;
+  font-size: 14px;
+  padding-right: 20px;
+  color: #333;
+  font-weight: bold;
+  padding-left: 7px;
+}
+.brand-second-active {
+  color: #f60;
+}
+h1 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  line-height: 51px;
+  text-indent: 20px;
+  border-bottom: 1px solid #dfdfdf;
+}

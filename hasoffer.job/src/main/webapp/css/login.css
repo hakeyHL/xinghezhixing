@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body {
+    background: url(images/login_bg.jpg) no-repeat 0 0;
+}
+
+/* Login */
+.login {
+    position: fixed;
+    width: 400px;
+    height: 320px;
+    left: 66%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -160px;
+    border-radius: 5px;
+}
+
+.login_bg {
+    background: #333;
+    background: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+}
+
+.login_title {
+    height: 50px;
+    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.login_title h2 {
+    padding-left: 20px;
+    font: 20px/2.5 "Microsoft YaHei", Arial;
+    color: #FFF;
+}
+
+.login_form {
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.login_form li {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 20px;
+    background: #FFF;
+    border-radius: 5px;
+}
+
+.login_form input {
+    position: absolute;
+    width: 338px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+    font: 20px/2.2 "Microsoft YaHei", Arial;
+    background: none;
+    outline: none;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+.login_form .login_msg {
+    display: none;
+    width: 348px;
+    height: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font: 14px/2 "Microsoft YaHei", Arial;
+    color: #F00;
+    border: 1px solid #E1C921;
+    background: #FFF9D7;
+    border-radius: 0;
+}
+
+.login_form .input_hover {
+    border: 1px solid #51A8FF;
+    box-shadow: 0 0 10px #FFF;
+}
+
+.login_form .login_btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    background: #428BCA;
+    font: 16px/2.5 "Microsoft YaHei", Arial;
+    color: #FFF;
+    text-shadow: 1px 1px 2px #555;
+    border: none;
+    cursor: pointer;
+}
+
+.login_form .login_btn:hover {
+    background: #357EBD;
+}
+
+.login_form .login_loading {
+    background: url(images/loading.gif) no-repeat 140px 12px #428BCA;
+}
+
+.login_form .empty-bg {
+    width: 200px;
+    margin: 0 auto;
+    background: none;
+}
+
+.text-tips {
+    font: 16px/2.5 "Microsoft YaHei", Arial;
+    padding-left: 12px;
+    color: #555;
+}
+

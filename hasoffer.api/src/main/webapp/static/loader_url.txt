@@ -1,0 +1,1 @@
+^(http://www.*\.tinydeal\.com/.*|http://www.*\.gearbest\.com/.*|http://www.*\.geekbuying\.com/.*|http://www.*\.banggood\.com/.*)

@@ -1,0 +1,31 @@
+@import "../function.less";
+@import "../variable.less";
+//skuExpandNav
+.sku-{
+  &nav{
+    .bb(#eaeaea);
+    li{width: 50%;.fl;.tc}
+  }
+  &nav-item{.dis-ib;line-height: 1.95rem;.c(#666666);font-weight: bold;.mb(-1);}
+  &active{
+    .bb(#0099cc,2);.c(#0099cc);
+  }
+}
+//SkuExpandDesc
+.sku-{
+  &desc-tbl{
+    .bb(#f3f3f3);
+    padding:3px .75rem;
+    .lab{
+      width:40%;
+    }
+    .value{.w(40,%);}
+    td{
+      .ft(.6,rem);
+      .lh(1.8,rem);
+      span{.c(#666);}
+      strong{.c(#333);}
+    }
+  }
+
+}

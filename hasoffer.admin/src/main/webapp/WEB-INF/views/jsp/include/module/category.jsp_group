@@ -1,0 +1,98 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<input type="hidden" name="cateId" id="cateId"/>
+<input type="hidden" name="category" id="category"/>
+<a id="btn_category" href="#" data-toggle="modal" data-target="#categoryModal" class="btn btn-default">
+	选择类目
+</a>
+
+<div class="modal" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">类目选择</h4>
+			</div>
+			<div class="modal-body" style="height: 800px;">
+				<div class="col-lg-12">
+					<div class="col-lg-3">
+						<div class="list-group" id="topCateDiv">
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div id="subCateDiv"></div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	var categoryManager = {
+		category1 : {id : "", name : ""},
+		category2 : {id : "", name : ""},
+		load : function() {
+			var url = "/cate/list/0";
+			http.doGet(url, function(data) {
+				var h = "";
+				var cates = data.categories;
+				for (var i = 0, len = cates.length; i < len; i++) {
+					h += "<a id='cate" + cates[i].id + "' href=\"#\" onclick='categoryManager.select(1,\""
+							+ cates[i].id + "\",\"" + cates[i].name +
+							"\")' class=\"list-group-item\">" + cates[i].name + "</a>"
+				}
+				$("#topCateDiv").html(h);
+			});
+		},
+
+		select : function(level, id, name) {
+			if (level == 1) {
+				categoryManager.category1 = {id : id, name : name};
+			} else if (level == 2) {
+				categoryManager.category2 = {id : id, name : name};
+				$("#categoryModal").modal("hide");
+				categoryManager.callback({category1 : categoryManager.category1, category2 : categoryManager.category2});
+				$("#cateId").val(id);
+				$("#category").val(name);
+				$("#btn_category").html(categoryManager.category1.name + " > " + categoryManager.category2.name);
+			}
+
+			var url = "/cate/group/" + id;
+
+			$("#topCateDiv").find("a").attr("class", "list-group-item");
+			$("#cate" + id).attr("class", "list-group-item active");
+
+			http.doGet(url, function(data) {
+				var h = "";
+				for (var cm in data.cateMap) {
+					h += categoryManager.getSubDiv(cm, data.cateMap[cm]);
+				}
+				$("#subCateDiv").html(h);
+			});
+		},
+
+		getSubDiv : function(group, cates) {
+			var h = "<div class=\"col-lg-12\"><div class=\"panel panel-default\"><div class=\"panel-heading\">";
+			h += group;
+			h += "</div><div class=\"list-group\">";
+			for (var i = 0, len = cates.length; i < len; i++) {
+				h += "<a class=\"list-group-item\" href='#' onclick='categoryManager.select(2," + cates[i].id + ",\"" + cates[i].name +
+						"\")'>";
+				h += cates[i].name;
+				h += "</a>";
+			}
+			h += "</div></div></div>";
+			return h;
+		},
+
+		callback : function(data) {
+			console.log("category back");
+		}
+	};
+</script>

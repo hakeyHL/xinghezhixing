@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <substitutionProperty name="log.base" value="${user.home}/logs/task-logs"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-5level %logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/stdout.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/stdout.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-5level %logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ActionAccessLoggerFileOut" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/action-access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/action-access.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-5level %logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ExceptionLoggerFileOut" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/exception.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/exception.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-5level %logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="PerformanceStatisticsReportLoggerFileOut" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/performance-statistics.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/performance-statistics.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][IP:%X{ip}|USER:%X{user}][%-5level %logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- logger -->
+    <logger name="ActionAccessLogger" level="INFO" additivity="false">
+        <appender-ref ref="ActionAccessLoggerFileOut"/>
+    </logger>
+
+    <logger name="hasoffer" level="INFO"/>
+    <!-- code info log -->
+    <logger name="hasoffer.job" level="INFO">
+        <appender-ref ref="InfoLoggerFileOut"/>
+        <appender-ref ref="ErrorLoggerFileOut"/>
+    </logger>
+
+
+    <logger name="ch.qos.logback" level="INFO"/>
+    <logger name="org.mybatis" level="INFO"/>
+    <logger name="org" level="INFO"/>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="rollingFile"/>
+    </root>
+</configuration>

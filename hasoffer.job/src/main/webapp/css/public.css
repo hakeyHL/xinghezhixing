@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body, div, ul, li, dl, dt, h1, h2, h3, a, span, img, p, input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    font: 14px/1.7 "Microsoft YaHei", Arial;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F8F8F8;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+    background: rgba(34, 34, 34, 0.9) !important;
+    background: #222;
+}
+
+.footer p, .footer a {
+    text-align: center;
+    color: #FFF;
+    font: 12px/2.5 "SimSun", Arial;
+}
+
+.footer a {
+    text-decoration: underline;
+}

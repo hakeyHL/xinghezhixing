@@ -1,0 +1,1077 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font-size:100%;
+    font:inherit;
+    vertical-align:baseline*/
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: #eef0f3;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei', '微软雅黑', Tahoma, Arial, Verdana, STHeiti, sans-serif;
+    color: #666666;
+    -webkit-text-size-adjust: 100%
+}
+
+/* 公共css */
+.whauto {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fl1 {
+    float: left;
+    display: block;
+}
+
+.fr {
+    float: right;
+}
+
+.fr1 {
+    float: right;
+    display: block;
+}
+
+.textalign {
+    text-align: center;
+}
+
+.textalignleft {
+    text-align: left;
+}
+
+.textalignright {
+    text-align: right;
+}
+
+.padtop2 {
+    padding-top: 2px;
+}
+
+.padtop3 {
+    padding-top: 3px;
+}
+
+.padtop4 {
+    padding-top: 4px;
+}
+
+.padtop5 {
+    padding-top: 5px;
+}
+
+.padtop6 {
+    padding-top: 6px;
+}
+
+.padtop7 {
+    padding-top: 7px;
+}
+
+.padtop8 {
+    padding-top: 8px;
+}
+
+.padtop10 {
+    padding-top: 10px;
+}
+
+.padtop12 {
+    padding-top: 12px;
+}
+
+.padtop15 {
+    padding-top: 15px;
+}
+
+.padtop20 {
+    padding-top: 20px;
+}
+
+.padtop30 {
+    padding-top: 30px;
+}
+
+.padtop40 {
+    padding-top: 40px;
+}
+
+.padtop50 {
+    padding-top: 50px;
+}
+
+.padtop80 {
+    padding-top: 80px;
+}
+
+.padtop100 {
+    padding-top: 100px;
+}
+
+.padtop120 {
+    padding-top: 120px;
+}
+
+.padright5 {
+    padding-right: 5px;
+}
+
+.padright20 {
+    padding-right: 20px;
+}
+
+.padright40 {
+    padding-right: 40px;
+}
+
+.padleft5 {
+    padding-left: 5px;
+}
+
+.padleft10 {
+    padding-left: 10px;
+}
+
+.padleft20 {
+    padding-left: 20px;
+}
+
+.padleft30 {
+    padding-left: 30px;
+}
+
+.padleft40 {
+    padding-left: 40px;
+}
+
+.padbottom10 {
+    padding-bottom: 10px;
+}
+
+.padbottom20 {
+    padding-bottom: 20px;
+}
+
+.margintop10 {
+    margin-top: 10px;
+}
+
+.margintop30 {
+    margin-top: 30px;
+}
+
+.margintop16 {
+    margin-top: 16px;
+}
+
+.marginleft5 {
+    margin-left: 5px;
+}
+
+.marginleft10 {
+    margin-left: 10px;
+}
+
+.marginright5 {
+    margin-right: 5px;
+}
+
+.marginbottom {
+    margin-bottom: 20px;
+}
+
+.textfr {
+    text-align: right
+}
+
+.w960 {
+    width: 960px;
+    margin: auto;
+}
+
+.w920 {
+    width: 920px;
+    margin: auto;
+}
+
+.w460 {
+    width: 460px;
+    float: left;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.w500 {
+    width: 500px;
+}
+
+.w160 {
+    width: 160px;
+}
+
+.w345 {
+    width: 345px;
+}
+
+.w740 {
+    width: 740px;
+}
+
+.h240 {
+    height: 240px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.redfont1 {
+    color: #ef3838;
+    font-weight: 400;
+    font-family: Arial, Verdana, Tahoma, STHeiti, sans-serif;
+}
+
+.redfont2 {
+    color: #ef3838;
+    font-size: 12px;
+}
+
+.redfont3 {
+    color: #ef3838;
+}
+
+.gryfont1 {
+    color: #9b9b9b;
+}
+
+.gryfont2 {
+    color: #454545;
+}
+
+.gryfont3 {
+    color: #313131;
+}
+
+.gryfont4 {
+    color: #cccccc;
+    padding: 0px 3px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.handlink {
+    cursor: pointer;
+}
+
+/*
+.shadowed {
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.42) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.shadowed2{
+	-webkit-box-shadow:0 1px 10px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:0 1px 10px rgba(0, 0, 0, 0.25);
+	box-shadow:0 1px 10px rgba(0, 0, 0, 0.25);
+}
+*/
+.table tr .textaligncenter {
+    text-align: center;;
+}
+
+/* 公共css结束 */
+
+/*button start*/
+.pay_btn {
+    width: 85px;
+    height: 30px;
+    display: inline-block;
+    *display: inline;
+    padding: 4px 12px;
+    _padding-top: 3px;
+    _padding-bottom: 3px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 14px;
+    line-height: 20px;
+    *line-height: 20px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #ff4646;
+    *background-color: #ff4646;
+    background-image: url(../images/pay_button_bg.png);
+    background-repeat: no-repeat;
+    border: 0px;
+    *border: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+
+}
+
+.pay_btn:hover {
+    color: #fff;
+    background-image: url(../images/pay_button_over_bg.png);
+    *background-image: url(../images/pay_button_over_bg.png);
+
+}
+
+.pay_btn01 {
+    width: 128px;
+    height: 40px;
+    display: inline-block;
+    *display: inline;
+    padding: 4px 12px;
+    _padding-top: 3px;
+    _padding-bottom: 3px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 14px;
+    line-height: 20px;
+    *line-height: 20px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #ff4646;
+    *background-color: #ff4646;
+    background-image: url(../images/pay_button_bg01.png);
+    background-repeat: no-repeat;
+    border: 0px;
+    *border: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+
+}
+
+.pay_btn01:hover {
+    color: #fff;
+    background-image: url(../images/pay_button_over_bg01.png);
+    *background-image: url(../images/pay_button_over_bg01.png);
+
+}
+
+.pay_btn02 {
+    width: 108px;
+    height: 40px;
+    display: inline-block;
+    *display: inline;
+    padding: 4px 12px;
+    _padding-top: 3px;
+    _padding-bottom: 3px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 14px;
+    line-height: 20px;
+    *line-height: 20px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #ff4646;
+    *background-color: #ff4646;
+    background-image: url(../images/pay_button_bg02.png);
+    background-repeat: no-repeat;
+    border: 0px;
+    *border: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *zoom: 1;
+
+}
+
+.pay_btn02:hover {
+    color: #fff;
+    background-image: url(../images/pay_button_over_bg02.png);
+    *background-image: url(../images/pay_button_over_bg02.png);
+
+}
+
+/*button end*/
+
+/* header css start */
+/*
+.header{
+	position: relative;
+	left: 0; 
+	top: 0; 
+	right: 0; 
+	height: 62px; 
+	padding: 0 50px; 
+	background: #2E2E2E; 
+	color: #FFF; 
+	z-index: 10;
+}
+.header_text{
+	height: 62px; 
+	width: 960px;
+	margin: auto;
+}
+
+.logo { 
+	float: left; 
+	width: 89px; 
+	height: 48px; 
+	background: url(../images/logo.png) no-repeat 0 0; 
+	margin-top: 8px; 
+}
+.logo > a { 
+	display: block; 
+	width: 89px; 
+	height: 48px; 
+}
+
+.nav ul{
+	width: auto;
+	height: 40px;
+	overflow: hidden;
+}
+.nav ul li{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+}
+.nav ul li a{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	padding:0px 10px;
+	font-size: 14px;
+}
+.profile-menu {
+	float: right;
+	padding: 3px;
+	margin-left: 10px;
+}
+.profile-menu .profile-pic {
+	width: 34px;
+	height: 34px;
+}
+#top-menu {
+    margin-left: 10px;
+    font-size:16px;
+    margin-top:13px
+}
+
+#top-menu > li > a, .logo {
+    color: #c7c7c7;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#top-menu .caret {
+    border-top-color: #c7c7c7;
+    display: none;
+}
+
+#top-menu > li > a:hover .caret {
+    border-top-color: #FFA206;
+}
+
+#top-menu > li.active > a, #top-menu > li.active > :hover, #top-menu > li.active > a:focus, #top-menu > li > a:hover, #top-menu > li > a:focus {
+    background: transparent;
+    color: #FFA206;
+}
+/* header css end */
+
+/* main css start */
+.main {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.main_text {
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    background-color: #fff;
+}
+
+.bread_box {
+    padding: 0px 20px;
+}
+
+.payOrder {
+    padding: 0px 20px;
+}
+
+.payOrder01 {
+    padding: 50px 0px 0px 20px;
+}
+
+.payOrder02 {
+    padding: 80px 0px 0px 20px;
+}
+
+.table tr .tablealignr {
+    padding: 8px;
+    line-height: 20px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.table tr .bordertopNone {
+    border-top: none;
+}
+
+.payWidget {
+    padding: 0px 10px 20px 10px;
+    position: relative;
+}
+
+.payWidget_text {
+    width: 920px;
+    height: 330px;
+    overflow: hidden;
+    _margin-left: 5px;
+    margin-left: 10px;
+    background-color: #f2f4f6;
+}
+
+.payWidget_title {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: 999;
+    width: 940px;
+    height: 57px;
+    background: url(../images/pay_widget_bg.png) no-repeat center center;
+}
+
+.registration_text {
+    width: 365px;
+    padding: 15px 0px 0px 95px;
+}
+
+.registration_icon {
+    width: 275px;
+    height: 40px;
+}
+
+.registration_icon button {
+    width: 275px;
+    height: 40px;
+    border: 0px;
+    background: url(../images/pay_registration_button.png) no-repeat center center;
+}
+
+.registration_icon button:hover {
+    width: 275px;
+    height: 40px;
+    border: 0px;
+    background: url(../images/pay_registration_over_button.png) no-repeat center center;
+}
+
+.tel_no {
+    width: 275px;
+    height: 40px;
+}
+
+.tel_no input {
+    width: 275px;
+    height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    padding: 0px 5px;
+}
+
+.password {
+    width: 275px;
+    height: 38px;
+}
+
+.password input {
+    width: 132px;
+    height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    padding: 0px 5px;
+}
+
+.captcha {
+    width: 275px;
+    height: 40px;
+}
+
+.captcha01 {
+    width: 225px;
+    height: 30px;
+}
+
+.captcha .captchatext {
+    float: left;
+    width: 132px;
+    height: 40px;
+    display: block;
+}
+
+.captcha .spanwth {
+    float: left;
+    width: 245px;
+    text-align: right;
+    height: 30px;
+    display: block;
+}
+
+.captcha input {
+    width: 132px;
+    height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    padding: 0px 5px;
+}
+
+.captcha img {
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+}
+
+.noclear {
+    width: 255px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.noclear a {
+    font-size: 12px;
+}
+
+.login_text {
+    width: 460px;
+    padding: 15px 0px 0px 95px;
+}
+
+.login_icon {
+    width: 275px;
+    height: 40px;
+}
+
+.login_icon button {
+    width: 275px;
+    height: 40px;
+    border: 0px;
+    background: url(../images/pay_login_button.png) no-repeat center center;
+}
+
+.login_icon button:hover {
+    width: 275px;
+    height: 40px;
+    border: 0px;
+    background: url(../images/pay_login_over_button.png) no-repeat center center;
+}
+
+.tel_no, .password, .captcha {
+    float: left;
+}
+
+/* main css end */
+
+.footer {
+    width: 960px;
+    height: 80px;
+    margin: auto;
+}
+
+.footer_text {
+    width: 960px;
+    padding-left: 175px;
+    height: 40px;
+    font-size: 12px;
+    color: #828282;
+}
+
+.footer_text ul {
+    width: 400px;
+    height: 40px;
+    float: left;
+    margin-left: 40px;
+}
+
+.footer_text ul li {
+    width: 80px;
+    height: 40px;
+    float: left;
+}
+
+.footer_text ul li a {
+    color: #828282;
+}
+
+/* pay select css start */
+.coupon {
+    padding: 0px 20px;
+}
+
+.coupon_text {
+    width: 920px;
+    height: auto;
+    overflow: hidden;
+    background-color: #f2f4f6;
+    padding: 0px 20px;
+}
+
+.coupon_text01 {
+    width: 920px;
+    height: auto;
+    overflow: hidden;
+    padding: 0px 20px;
+}
+
+/* tab start */
+#title {
+    height: 40px;
+    line-height: 40px;
+}
+
+#title span {
+    float: left;
+    width: 120px;
+    height: 40px;
+    color: #333;
+    background: #eee;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#title span.on {
+    background: #ff4646;
+    color: #fff;
+}
+
+#title span.onblue {
+    background: #32aae2;
+    color: #fff;
+}
+
+#con {
+    background: #fef5ef;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#con ul {
+    display: none;
+    padding: 10px;
+
+}
+
+#con ul.on {
+    display: block;
+
+}
+
+#con ul li {
+    height: 24px;
+    line-height: 24px;
+    text-indent: 10px;
+    height: auto;
+    overflow: hidden;;
+}
+
+#con ul li p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* tab end */
+
+.pay_selectbank {
+    height: auto;
+    overflow: hidden;
+    padding: 0px 20px;
+}
+
+.pay_banktable {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ea7e61;
+    background-color: #feeadd;
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+    line-height: 40px;
+}
+
+.pay_banktable tr {
+    border-bottom: 1px solid #fabcac;
+}
+
+.pay_banktable td {
+    border-right: 1px solid #fabcac;
+}
+
+.pay_teble input {
+    width: 20px;
+    height: 40px;
+}
+
+/* pay select css end */
+
+/* help css start */
+.helpbg {
+    background-color: #fef5ef;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.helpbg p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.helpbg01 {
+    background-color: #f2f4f6;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.helpbg01 p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* help css end */
+
+/* time css start */
+.timeline01 {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_bg01.png) no-repeat center center;
+}
+
+.timeline02 {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_bg02.png) no-repeat center center;
+}
+
+.timeline03 {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_bg03.png) no-repeat center center;
+}
+
+.timeline04_nopay {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_nopay_bg01.png) no-repeat center center;
+}
+
+.timeline05_nopay {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_nopay_bg02.png) no-repeat center center;
+}
+
+.timeline06_nopay {
+    width: 305px;
+    height: 20px;
+    background: url(../images/timeline_nopay_bg03.png) no-repeat center center;
+}
+
+/* time css end */
+
+/* detail css start */
+.pay_detail {
+    height: auto;
+    overflow: hidden;
+    padding: 0px 20px;
+}
+
+.pay_detail_backinfo {
+    height: 40px;
+    line-height: 40px;
+    background-color: #e4f5ff;
+}
+
+/* detail css end */
+
+/*paylist css start */
+.paylistleft {
+    width: 155px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.paylistleft table td {
+    text-align: center;
+}
+
+.paylistleft table .bgred {
+    background-color: #ff4646;
+    color: #fff;
+    line-height: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.paylistleft table .bggray {
+    background-color: #eef0f3;
+}
+
+.paylistleft table a {
+    color: #313131;
+    line-height: 30px;
+}
+
+.paylistright {
+    font-size: 12px;
+    width: 750px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.paylist_title {
+    width: 750px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.paylistright table .payredlink {
+    color: #ef3838;
+    font-size: 12px;
+}
+
+.paylistright table .payredlink:hover {
+    color: #f52828;
+    font-size: 12px;
+}
+
+.paylistright table .paybluelink {
+    color: #0084c1;
+    font-size: 12px;
+}
+
+.paylistright table .paybluelink:hover {
+    color: #0084c1;
+    font-size: 12px;
+}
+
+/*paylist css end */
+
+/*uppop css start */
+.bg01 {
+    width: 765px;
+    height: 380px;
+    background: url(../images/1_Preview.jpg) repeat;
+}
+
+.detail_uppop {
+    width: 765px;
+    padding: 10px;
+    height: 380px;
+    background-color: #fff;
+    /* other browsers */
+    opacity: 0.95;
+    /* this works in IE6, IE7, and IE8 */
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=95);
+    /* this works in IE8 only */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=95)";
+}
+
+.detail_uppop_title, .detail_uppop_text, .detail_uppop_money, .detail_uppop_quit {
+    width: 745px;
+    height: 30px;
+}
+
+.detail_uppop_table {
+    width: 745px
+    margin-bottom: 20px;
+}
+
+.detail_uppop_table table {
+    border: 1px solid #ea7e61;
+    background-color: #feeadd;
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+    line-height: 30px;
+}
+
+.detail_uppop_table tr {
+    border-bottom: 1px solid #fabcac;
+}
+
+.detail_uppop_table td {
+    border-right: 1px solid #fabcac;
+    padding: 3px;
+}
+
+.detail_uppop iframe {
+    width: 745px;
+    height: 210px;
+    border: 0px;
+    background: none;
+}
+
+/*uppop css end */
+
+
+
+
+
+
+
+
+
+
+
+
+

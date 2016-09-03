@@ -1,0 +1,39 @@
+
+table tr td {
+    /*text-align: center;*/
+    height: 30px;
+    line-height: 30px;
+}
+
+.imgInList {
+    width: 140px;
+    height: 140px;
+}
+
+.uploadImg {
+    font-size: 12px;
+    overflow: hidden;
+    position: absolute
+}
+
+.uploadFile {
+    position: absolute;
+    z-index: 100;
+    margin-left: -180px;
+    font-size: 60px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: -5px;
+}
+
+.userDiv {
+    margin-right: 5px;
+    height: 60px;
+}
+
+.centerDiv {
+    margin-top: -25px;
+    margin-left: -25px;
+    left: 50%;
+    top: 35%;
+}

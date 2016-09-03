@@ -1,0 +1,171 @@
+/*
+* name: school.css;
+* date: 2014-06-09;
+* description: 开课计划样式;
+*/
+body {
+    overflow-y: auto;
+}
+
+.fl {
+    float: left;
+}
+
+.sc-table {
+    position: relative;
+}
+
+.sc-left {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 220px;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+}
+
+.sc-left table {
+    width: 100%;
+}
+
+.sc-left td, .sc-left th {
+    height: 31px;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    text-align: center;
+}
+
+.sc-left td.brn, .sc-left th.brn {
+    border-right: none;
+    font-size: 12px;
+}
+
+.sc-right {
+    position: absolute;
+    left: 230px;
+    right: 10px;
+    top: 0;
+    border: 1px solid #DDD;
+    overflow-x: auto;
+}
+
+.sc-title, .sc-small-title {
+    border-bottom: 1px solid #DDD;
+}
+
+.sc-title h2 {
+    font-size: 14px;
+    text-align: center;
+    background-color: #EEE;
+}
+
+.sc-small-title {
+    overflow: hidden;
+}
+
+.sc-small-title h3 {
+    float: left;
+    width: 120px;
+    line-height: 90px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sc-small-nav {
+    float: right;
+    border-left: 1px solid #DDD;
+    width: 89px;
+    margin-left: 10px;
+}
+
+.sc-small-nav p {
+    padding-left: 10px;
+}
+
+.ctrl-p {
+    border-top: 1px solid #DDD;
+    padding: 5px 0;
+}
+
+.sc-block-list {
+    width: 5000px;
+}
+
+.sc-small-menu p {
+    padding-left: 10px;
+}
+
+.sc-block {
+    border-right: none;
+}
+
+.sc-block h2 {
+    border-right: 1px solid #DDD;
+}
+
+.sc-part {
+    border-right: 1px solid #DDD;
+}
+
+.sc-part td, .sc-part th {
+    height: 31px;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sc-part td.brn, .sc-part th.brn {
+    border-right: none;
+    font-size: 12px;
+}
+
+.sc-btn {
+    margin: 0 3px;
+    padding: 3px;
+    background: #F0AD4E;
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.sc-btn:hover, .sc-btn:focus {
+    padding: 3px;
+    background: #F0AD4E;
+    border-radius: 3px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.tip-inner {
+    color: #FFF;
+}
+
+/*
+.class-main { position: relative; }
+.class-main .class-title { font-size: 14px; text-align: center; background-color: #E1F9FF; border-bottom: 1px solid  #DDD; color: #333; }
+.class-main .class-title h3 { font-size: 14px; color: #333; }
+.class-nav { border-bottom: 1px solid  #DDD; overflow: hidden; }
+.nav-title { width: 58%; }
+.nav-title h3 { margin-top: 30px; font-size: 14px; text-align: center; vertical-align: middle; }
+.nav-menu { width: 40%; font-size: 12px; border-left: 1px solid #DDD; padding: 0 5% 0 2%; }
+.left-class,.right-class { border: 1px solid  #DDD; background-color: #FFF; }
+.left-class { position: absolute; left: 10px; width: 220px; }
+.time-list table { width: 100%; border: none; }
+.time-list td,.time-list th { padding: 5px 0; border: 1px solid #DDD; }
+.time-list thead tr { border: none; }
+.time-list tr th { text-align: center; }
+.time-list .time { width: 40%; }
+.time-list .week { width: 30%; }
+.time-list .am { width: 30%; }
+.time-list tr td { text-align: center; font-size: 12px; }
+
+
+.right-class { position: absolute; left: 229px; right: 10px; }
+.right-class .none { border: none; }
+*/

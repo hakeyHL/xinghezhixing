@@ -1,0 +1,49 @@
+.compare-plugin *{margin:0;padding:0;}
+.compare-plugin span,.compare-plugin a,.compare-plugin strong{font-size:14px;}
+.compare-plugin  a:hover { text-decoration: none; }
+.compare-plugin ul,.compare-plugin ol{list-style: none;}
+.compare-plugin-clearfix:before, .compare-plugin-clearfix:after {
+    content: "";
+    display: table;
+}
+.compare-plugin-clearfix:after {
+    clear: both;
+}
+
+.compare-plugin-clearfix {
+    clear: both;
+    *zoom: 1;
+}
+
+.compare-plugin{margin:5px 0px;}
+.compare-plugin a,.compare-plugin strong,.compare-plugin span{color:#666;}
+/*yao 加个下方显示*/
+.compare-plugin-list{float:left;width:100%;}
+.compare-plugin-list>li{float:left;      }
+.compare-plugin-sprite{display:inline-block;background:url(../../image/plugin/sprite.png) no-repeat;vertical-align: middle;}
+.compare-plugin-logo{background-position:0px 0px;height:30px;padding-left: 32px;position:relative;z-index:504;}
+.compare-plugin-has-history{margin-left: 131px;}
+.compare-plugin-price-wrap{height:30px;}
+.compare-plugin-item-a{test-description:none;padding-right:22px;line-height: 28px;position:absolute;z-index: 0;border: 1px solid #dfdfdf;background-color:#fff;margin-left:-1px}
+.compare-plugin .compare-plugin-item-a strong{color: #0099cc;}
+.compare-plugin-price-icon{margin-right:8px;margin-left:10px;background-position:-39px 0px;height:15px;padding-left:15px;vertical-align: text-top;}
+.compare-plugin-hover{padding: 11px 11px 25px;position:absolute;background-color: #fff;border: 1px solid #dfdfdf;display:none;margin-top: 40px;margin-left:-1px;z-index: 502;}
+.compare-plugin-price-list{width: 223px;}
+.compare-plugin-history{width:460px;}
+.compare-plugin-item:hover .compare-plugin-item-a{z-index:503;height:40px;border-bottom:0;background-color: #fff;}
+.compare-plugin-item:hover .compare-plugin-hover{display:block;}
+.compare-plugin-price-item{display:block;line-height: 36px; padding-left: 9px; padding-right: 20px;}
+.compare-plugin-price-list .compare-plugin-last{padding-left:0;padding-right: 0;}
+.compare-plugin .compare-plugin-value{float:right;color: #0099cc;font-weight: bold;}
+.compare-plugin-more{background-color: #f6f7f9;border:1px solid #dfdfdf;line-height: 24px;width: 120px;display:block;text-align:center;margin:auto;margin-top:20px;}
+.compare-plugin-more-icon{background-position: -41px -20px;width:12px;padding-top:10px;position:absolute;margin-top: 10px;margin-left: 5px;}
+.compare-plugin-odd{background-color: #f6f7f9;}
+.compare-plugin-price-title{font-weight:bold;color:#09c;}
+.compare-plugin-history-icon{background-position: -52px -34px;height:13px;padding-left:20px;margin-right: 8px;margin-left: 10px;}
+#compare-plugin-arc{position:absolute;}
+.compare-plugin-history-title{color: #333333;text-align: center;padding-bottom: 10px;font-size: 14px;font-weight: bold;}
+.compare-plugin-arrow-down{position:absolute;margin-top:-5px;z-index:1;margin-left:5px;}
+.compare-plugin-arrow-down:before{content:"";border-width:0px 6px 6px 6px;border-color: transparent transparent #f60 transparent;border-style:solid;display:inline-block;position: absolute;}
+.compare-plugin-arrow-down:after{content:"";border-width:0px 5px 5px 5px;border-color:transparent transparent #fff transparent;border-style:solid;position:absolute;margin-left: 1px;margin-top:1px;}
+.compare-plugin-history-price{position:absolute;margin-left:370px;margin-top:115px;background-color:#fff;}
+.compare-plugin-history-price .contain{padding:5px 8px;min-width:100px;border:1px solid #f60;font-size:12px;color:#333;text-align:center;box-sizing:border-box;line-height:1;}

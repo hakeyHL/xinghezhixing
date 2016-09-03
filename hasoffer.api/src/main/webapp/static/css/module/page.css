@@ -1,0 +1,63 @@
+.page-nav {
+    font-size: 0;
+    padding: 5px 0;
+    text-align: center;
+    clear: both;
+    font-weight: bold;
+}
+
+.page-nav a,
+.page-nav span {
+    vertical-align: middle;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+    margin-left: -1px;
+    border: 1px solid #e6e6e6;
+    line-height: 35px;
+    padding: 0 10px;
+    min-width: 20px;
+    _width: 20px;
+    text-align: center;
+}
+
+.page-nav .cur {
+    color: #0099cc;
+}
+
+.page-nav a:hover {
+    color: #0099cc !important;
+}
+
+.page-nav .pre,
+.page-nav .next {
+    color: #0099cc;
+    margin: 0 3px;
+}
+
+.page-nav .pre:hover,
+.page-nav .next:hover {
+    color: white;
+    color: white !important;
+    background-color: #0099cc;
+    text-decoration: none;
+    border-color: #0099cc;
+}
+
+.page-nav .pre {
+    border-radius: 3px 0 0 3px;
+}
+
+.page-nav .next {
+    border-radius: 0 3px 3px 0;
+}
+
+.page-nav .disable,
+.page-nav .disable:hover {
+    color: #cccccc;
+    color: #cccccc !important;
+}
+.page-nav>span,.page-nav>a{background-color: #fff;}

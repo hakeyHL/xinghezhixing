@@ -1,0 +1,12 @@
+/target/
+/bin/
+/logs/
+*/logs/
+*/target/
+*.iml
+*.ipr
+*.iws
+/.idea/
+*.pyc
+*/*.pyc
+

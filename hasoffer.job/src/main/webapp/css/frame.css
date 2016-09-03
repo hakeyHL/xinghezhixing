@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+body, div, ul, li, dl, dt, h1, h2, h3, a, span, img, p, input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    font: 14px/1.7 "Microsoft YaHei", Arial;
+    color: #333;
+}
+
+body {
+    width: 98%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 10px;
+}

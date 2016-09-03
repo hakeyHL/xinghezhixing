@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <substitutionProperty name="log.base" value="${user.home}/logs/fetch-logs"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-6level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="StdoutFile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/stdout.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/stdout.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FetchRequestLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/fetch-request.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/fetch-request.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FetchTaskResultLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/fetch-task-result.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/fetch-task-result.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="FetchFlowLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/fetch-flow.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/fetch-flow.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ErrorLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/error.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <appender name="InfoLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/info.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ThirdPartLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/thirdPart.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/thirdPart.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="fetchLoggerFileOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/fetch.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/fetch.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SpiderUrlTaskOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/spiderUrlTask.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/spiderUrlTask.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="SpiderListTaskOut"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/spiderListTask.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}/spiderListTask.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxHistory>10</MaxHistory>
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date [%thread][%-8level%logger{80}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- logger -->
+
+    <!-- code info log -->
+    <logger name="hasoffer" level="DEBUG">
+        <appender-ref ref="InfoLoggerFileOut"/>
+        <appender-ref ref="ErrorLoggerFileOut"/>
+    </logger>
+
+    <!-- third part log -->
+    <logger name="org" level="INFO">
+        <appender-ref ref="ThirdPartLoggerFileOut"/>
+    </logger>
+
+    <logger name="com" level="INFO">
+        <appender-ref ref="ThirdPartLoggerFileOut"/>
+    </logger>
+
+    <logger name="sites" level="DEBUG">
+        <appender-ref ref="fetchLoggerFileOut"/>
+    </logger>
+
+    <logger name="hasoffer.spider" level="DEBUG">
+        <appender-ref ref="fetchLoggerFileOut"/>
+    </logger>
+
+    <logger name="hasoffer.dubbo" level="DEBUG">
+        <appender-ref ref="fetchLoggerFileOut"/>
+    </logger>
+
+    <logger name="us.codecraft" level="DEBUG">
+        <appender-ref ref="fetchLoggerFileOut"/>
+    </logger>
+
+    <logger name="fetchFlowLogger" level="DEBUG">
+        <appender-ref ref="FetchFlowLoggerFileOut"/>
+    </logger>
+
+    <logger name="searchListLogger" level="DEBUG">
+        <appender-ref ref="SpiderListTaskOut"/>
+    </logger>
+
+    <logger name="spiderUrlLogger" level="DEBUG">
+        <appender-ref ref="SpiderUrlTaskOut"/>
+    </logger>
+
+    <logger name="hasoffer.dubbo.api.fetch.service.impl.FetchDubboServiceImpl" level="DEBUG">
+        <appender-ref ref="FetchRequestLoggerFileOut"/>
+    </logger>
+
+    <logger name="hasoffer.spider.webmagic.pipeline.RedisPagePipeline" level="DEBUG">
+        <appender-ref ref="FetchTaskResultLoggerFileOut"/>
+    </logger>
+
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="StdoutFile"/>
+    </root>
+</configuration>

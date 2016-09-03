@@ -1,0 +1,26 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-6 {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+.page-tab {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+  transition-duration: 350ms;
+  overflow: hidden;
+}
+.page-tab > * {
+  float:left;
+}

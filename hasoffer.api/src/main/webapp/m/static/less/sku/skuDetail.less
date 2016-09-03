@@ -1,0 +1,47 @@
+@import "../function.less";
+@import "../variable.less";
+
+h1 {
+  .ft(0.7,rem);
+  .lh(20);
+  color: #333;
+  .pt(7);
+  font-weight: bold;
+}
+@imgh:110px;
+@imgw:110px;
+.sku- {
+  &wrap {
+    .p(10);
+    .bb(#ebebeb);
+  }
+  &p-img {
+    .abs;
+    width: @imgw;
+    height: @imgh;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      font-size: 0;
+    }
+  }
+  &detail {
+    height:@imgh;
+    .ml(@imgw+15);
+    .rel;
+  }
+  &price {
+    .abs;
+   line-height: 1;
+    bottom: 0;
+    small {
+      .ft(0.5,rem);
+      color: #666;
+    }
+    strong {
+      .ft(.9,rem);
+      .ml(0.35,rem);
+      color: #f60;
+    }
+  }
+}

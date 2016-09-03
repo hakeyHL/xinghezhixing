@@ -1,0 +1,273 @@
+.compare-head {
+  padding-top: 17px;
+}
+.compare-head-a {
+  height: 200px;
+  width: 200px;
+}
+.compare-head-a img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline;
+}
+.compare-head-right {
+  background-color: #f4f4f4;
+  height: 60px;
+  width: 400px;
+  margin-top: 9px;
+  position: relative;
+  padding: 10px 10px;
+}
+.compare-head-best {
+  color: #ff6600;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 11px;
+}
+.compare-head-sp {
+  line-height: 1;
+  font-size: 16px;
+  color: #666;
+  margin-top: 2px;
+}
+.compare-go {
+  right: 24px;
+  top: 50%;
+  margin-top: -16px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 32px;
+  width: 120px;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  background: url(/static/image/sprite/detail-sprite.png) 0px 0px no-repeat;
+}
+.compare-go:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.compare-head-body {
+  margin: 0px 320px 0px 220px;
+  position: relative;
+  min-height: 160px;
+}
+h1 {
+  font-size: 30px;
+  line-height: 110%;
+  padding-top: 15px;
+  height: 2.2em;
+  overflow: hidden;
+  display: inline-block;
+}
+.compare-head-attr {
+  margin-top: 10px;
+}
+.compare-head-model {
+  color: #11a0cf;
+}
+.compare-head-detail {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.compare-head-price {
+  font-size: 30px;
+  color: #ff6600;
+}
+.compare-body-nav {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 1px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 20px;
+}
+.compare-body-nav li {
+  width: 150px;
+  color: #666;
+  font-size: 18px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding-left: 4px;
+}
+.compare-body-nav .compare-active {
+  border-bottom: 3px #0099cc solid;
+  color: #333;
+}
+.compare-body-panel {
+  padding-top: 15px;
+}
+.compare-body-panel .compare-main {
+  float: left;
+  width: 73%;
+}
+.compare-body-panel .compare-bar {
+  float: right;
+  width: 27%;
+}
+.compare-body-panel .compare-all {
+  width: 100%;
+}
+.compare-body-tb .compare-web-logo {
+  display: block;
+  height: 66px;
+  text-align: center;
+  line-height: 40px;
+}
+.compare-body-tb img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.compare-body-tb .picture {
+  width: 180px;
+}
+.compare-body-tb .online {
+  width: 330px;
+}
+.compare-body-tb .name {
+  width: 310px;
+}
+.compare-body-tb .price {
+  width: 240px;
+}
+.compare-body-tb .href {
+  width: 140px;
+}
+.compare-body-tb .tc {
+  text-align: center;
+}
+.compare-body-tb thead {
+  background-color: #f4f4f4;
+  height: 40px;
+  line-height: 40px;
+}
+.compare-body-tb th {
+  color: #666;
+  font-weight: normal;
+}
+.compare-body-tb tbody tr {
+  border-bottom: solid 1px #f1f1f1;
+}
+.compare-body-tb tbody td {
+  padding: 10px 0px;
+}
+.compare-body-tb .compare-is {
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+.compare-width-s {
+  background: url(/static/image/sprite/detail-sprite.png) 0px -32px no-repeat;
+  line-height: 32px;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  color: #666666;
+}
+.compare-width-s:hover {
+  text-decoration: none;
+  color: #666;
+}
+.compare-price {
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  font-size: 18px;
+}
+.compare-best-price {
+  color: #ff6600;
+}
+.compare-body-recent {
+  padding-left: 35px;
+  color: #666;
+}
+.compare-body-recent dt,
+.compare-body-recent dd {
+  border-bottom: 1px solid #f1f1f1;
+}
+.compare-body-recent dd {
+  padding-bottom: 5px;
+}
+.compare-body-recent dt {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+}
+.compare-recent-time {
+  font-size: 16px;
+  line-height: 200%;
+  color: #999;
+}
+.compare-body-desc {
+  margin-top: 10px;
+}
+.compare-desc {
+  padding: 10px;
+}
+.compare-desc div,
+.compare-desc p {
+  line-height: 1.5;
+}
+.compare-desc img {
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+  font-size: 14px;
+}
+.compare-desc h1,
+.compare-desc h2,
+.compare-desc h3,
+.compare-desc h4,
+.compare-desc h5,
+.compare-desc h6,
+.compare-desc strong {
+  font-weight: bold;
+  line-height: 2.5;
+  font-size: 16px;
+}
+.compare-desc strong {
+  font-size: 14px;
+}
+.compare-desc h1 {
+  font-size: 18px;
+}
+.compare-sku-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.compare-lowest {
+  color: #f60;
+}
+.compare-lowest-ico {
+  background: url(/static/image/sprite/detail-sprite.png) no-repeat 0px -64px;
+  height: 25px;
+  padding-left: 66px;
+  position: absolute;
+  margin-left: -22px;
+  margin-top: -20px;
+}
+.compare-ellipse {
+  position: absolute;
+  font-size: 18px;
+  line-height: 110%;
+}
+.compare-base-attr tbody tr {
+  background-color: #ffffff;
+}
+.compare-base-attr tbody .odd {
+  background-color: #dfebed;
+}
+.compare-base-attr tbody td {
+  padding: 8px 30px;
+}
+.compare-base-attr .key {
+  width: 25%;
+}
+.compare-base-attr .value {
+  width: 75%;
+}

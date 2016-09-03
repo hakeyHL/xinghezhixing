@@ -1,0 +1,38 @@
+<app-settings>
+	<!-- default -->
+	<config stage='default'>
+	</config>
+
+	<config stage='dev'>
+		<add key="storages[0]" value="com.r0405.fileserver.impl.HttpStorageImpl"/>
+		<add key="storages[0].uploadUrl" value="http://file.allbuy.r0405.com:1080/upload"/>
+		<add key="storages[0].deleteUrl" value="http://file.allbuy.r0405.com:1080/delete"/>
+		<add key="storages[0].getUrl" value="http://file.allbuy.r0405.com:1080/get"/>
+
+		<add key="storages[0].rootUrls[0]" value="http://img0.allbuy.r0405.com/"/>
+		<add key="storages[0].rootUrls[1]" value="http://img1.allbuy.r0405.com/"/>
+	</config>
+
+	<config stage='test'>
+		<add key="storages[0]" value="com.r0405.fileserver.impl.HttpStorageImpl"/>
+		<add key="storages[0].uploadUrl" value="http://file.allbuy.r0405.com:1080/upload"/>
+		<add key="storages[0].deleteUrl" value="http://file.allbuy.r0405.com:1080/delete"/>
+		<add key="storages[0].getUrl" value="http://file.allbuy.r0405.com:1080/get"/>
+
+		<add key="storages[0].rootUrls[0]" value="http://img0.allbuy.r0405.com/"/>
+		<add key="storages[0].rootUrls[1]" value="http://img1.allbuy.r0405.com/"/>
+	</config>
+
+	<config stage='product'>
+		<add key="storages[0]" value="com.r0405.fileserver.impl.LocalDiskStorageImpl"/>
+		<add key="storages[0].baseDir" value="/var/price/image/"/>
+
+
+		<add key="rootUrls[0]" value="http://img0.price.allbuy.com"/>
+		<add key="rootUrls[1]" value="http://img1.price.allbuy.com"/>
+		<add key="rootUrls[2]" value="http://img2.price.allbuy.com"/>
+		<add key="rootUrls[3]" value="http://img3.price.allbuy.com"/>
+		<add key="rootUrls[4]" value="http://img4.price.allbuy.com"/>
+	</config>
+
+</app-settings>

@@ -1,0 +1,1 @@
+var CategorySecondList = React.createClass({})
